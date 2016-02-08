@@ -33,7 +33,7 @@ h2 {
 }
 
 .avatar {
-	background-image: url('/img/avatar.png');
+	background-image: url('img/avatar.png');
 	background-size: 80px;
 	background-repeat: no-repeat;
 	margin: auto;
