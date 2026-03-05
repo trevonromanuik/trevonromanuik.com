@@ -1,33 +1,33 @@
 ---
 import PolicySection from '@/components/PolicySection.astro';
-import type { PolicyCard } from '@/lib/types';
+import type {PolicyCard} from '@/lib/types';
 
 interface Props {
   alt?: boolean;
 }
 
-const { alt = false } = Astro.props;
+const {alt = false} = Astro.props;
 
 const title = "Food";
-const intro = "Everyone deserves access to nutritious, affordable food, regardless of their postal code or income. This section will outline a clear plan to reduce grocery costs, strengthen food security, and support the farmers and workers who feed our communities.";
+const intro = "Food is one of the most basic human needs. None of us can survive without it. Everyone deserves access to nutritious, affordable food, regardless of their postal code or income.";
 const cards: PolicyCard[] = [
-	{
-		icon: '🍲',
-		title: 'Community Kitchens',
-		text: 'I want to empower communities to come together to feed their members. Community Kitchens would be places where anyone in the community could get a hot cooked meal, whether because they can\'t afford groceries, or simply because they don\'t have time to cook for themselves.',
-	},
-	{
-		icon: '🥗',
-		title: 'Food Security',
-		text: 'Placeholder — content coming soon. This card will cover initiatives to ensure no one in our community goes to bed hungry.',
-	},
-	{
-		icon: '🚜',
-		title: 'Local Farmers',
-		text: 'Placeholder — content coming soon. This card will detail support programs for local agriculture and regional supply chains.',
-	},
+  {
+    icon: '🍲',
+    title: 'Community Kitchens',
+    text: 'I want to empower communities to come together to feed their members. Community Kitchens would be places where anyone in the community could get a hot cooked meal, whether because they can\'t afford groceries, or simply because they don\'t have time to cook for themselves.',
+  },
+  {
+    icon: '🚜',
+    title: 'Local Farmers',
+    text: 'Modern society could not exist without our farmers, full stop. Unfortunately big business is squeezing our small farmers, making it harder and harder to make a living providing food for the population. I want to turn farming back into the noble profession that it truly is.',
+  },
+  {
+    icon: '🌱',
+    title: 'Community Gardens',
+    text: 'On top of supporting farmers, I also want to empower communities to build and maintain community gardens. While they could never compete with large scale farming, a community that grows its own food is a more resilient community.',
+  },
 ];
 ---
 
-<PolicySection alt={alt} title={title} intro={intro} cards={cards} />
+<PolicySection alt={alt} title={title} intro={intro} cards={cards}/>
 

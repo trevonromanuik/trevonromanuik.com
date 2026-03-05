@@ -10,51 +10,51 @@ import Elections from '@/components/Elections.astro';
 ---
 
 <Layout>
-	<Nav />
-	<Hero />
+  <Nav/>
+  <Hero/>
   <main>
-	  <Introduction />
-		<Food alt />
-		<Housing />
-		<Healthcare alt />
-		<Elections />
-	</main>
-	<footer class="footer">
-		<div class="container footer__inner">
-			<p class="footer__name">Trevon Romanuik</p>
-			<p class="footer__tagline">Freedom isn't free — but it doesn't have to cost that much.</p>
-		</div>
-	</footer>
+    <Introduction/>
+    <Food alt/>
+    <Housing/>
+    <Healthcare alt/>
+    <Elections/>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__name">Trevon Romanuik</p>
+      <p class="footer__tagline">Freedom isn't free — but it doesn't have to cost that much.</p>
+    </div>
+  </footer>
 </Layout>
 
 <style>
-	.footer {
-		background: var(--navy);
-		border-top: 3px solid var(--red);
-		padding: 3rem 0;
-		text-align: center;
-		color: rgba(255, 255, 255, 0.7);
-	}
+  .footer {
+    background: var(--navy);
+    border-top: 3px solid var(--red);
+    padding: 3rem 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
 
-	.footer__inner {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-	}
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-	.footer__name {
-		font-family: 'Oswald', sans-serif;
-		font-size: 1.1rem;
-		font-weight: 600;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: var(--white);
-	}
+  .footer__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
 
-	.footer__tagline {
-		font-size: 0.9rem;
-		font-style: italic;
-		color: var(--gold);
-	}
+  .footer__tagline {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--gold);
+  }
 </style>

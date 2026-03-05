@@ -1,38 +1,38 @@
 ---
 import PolicySection from '@/components/PolicySection.astro';
-import type { PolicyCard } from '@/lib/types';
+import type {PolicyCard} from '@/lib/types';
 
 interface Props {
   alt?: boolean;
 }
 
-const { alt = false } = Astro.props;
+const {alt = false} = Astro.props;
 
 const title = "Healthcare";
-const intro = "Getting sick shouldn't mean going broke. This section will present a roadmap to make quality healthcare accessible and affordable for every person — from routine check-ups to prescription coverage to mental health support.";
+const intro = "Getting sick shouldn't mean going broke. The reality, though, is that there are people that make money off of you being sick. Think about it - what is more profitable? Curing cancer? Or selling someone cancer drugs month after month? Healthcare, more than anything, should be about people, not profit.";
 const cards: PolicyCard[] = [
-	{
-		icon: '🩺',
-		title: 'Universal Coverage',
-		text: 'Placeholder — content coming soon. This card will make the case for healthcare as a right, not a privilege tied to employment.',
-	},
-	{
-		icon: '💊',
-		title: 'Drug Pricing',
-		text: 'Placeholder — content coming soon. This card will outline measures to bring the cost of prescription drugs under control.',
-	},
-	{
-		icon: '🧠',
-		title: 'Mental Health',
-		text: 'Placeholder — content coming soon. This card will advocate for treating mental health care with the same urgency as physical health care.',
-	},
+  {
+    icon: '🌐',
+    title: 'Universal Coverage',
+    text: 'The worst thing we could do to our healthcare system is split it into two tiers: one for the haves, and one for the have nots. A single-payer system collectively gives us the best leverage for bringing healthcare costs down and ensuring that everyone gets equal treatment, regardless of how much money they have. I would do everything in my power to make sure that our healthcare system does not get privatized.',
+  },
+  {
+    icon: '🩺',
+    title: 'Community Doctors',
+    text: 'It is much, much cheaper to treat a health problem earlier than later. Unfortunately not everyone has easy access to local healthcare. I would push to provide grants to send people to medical school and increase our total number of doctors, with the requirement that they return and serve their local communities for a small number of years after graduating.',
+  },
+  {
+    icon: '🧠',
+    title: 'Mental Health',
+    text: 'We are living through a mental health crisis. Social media didn\'t help, and A.I. is about to make everything much, much worse. I know it won\'t solve every problem, but I genuinely believe that connecting people and giving them purpose in their communities, offline and in the real world, is one way to fight back.',
+  },
 ];
 ---
 
 <PolicySection
   alt={alt}
-	title={title}
-	intro={intro}
-	cards={cards}
+  title={title}
+  intro={intro}
+  cards={cards}
 />
 
