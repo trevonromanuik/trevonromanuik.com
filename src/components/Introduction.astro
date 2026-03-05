@@ -1,0 +1,42 @@
+---
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+---
+
+<section id="intro" class:list={['section', { 'section--alt': alt }]}>
+  <div class="container">
+    <div>
+      <h2 class="section-title">Introduction</h2>
+      <div class="section-accent"></div>
+    </div>
+    <p class="intro__body">
+      Something something work hard play hard
+    </p>
+		<blockquote class="intro__quote">
+      I want people to spend less time getting the things they NEED so they can spend more time pursuing the things they WANT.
+    </blockquote>
+    <p class="intro__body">
+      How do we do that? Let me tell you...
+    </p>
+	</div>
+</section>
+
+<style>
+	.intro__body {
+		color: var(--text-muted);
+		font-size: 1.05rem;
+		line-height: 1.75;
+	}
+
+	.intro__quote {
+		font-size: clamp(1.5rem, 3vw, 2.25rem);
+		font-style: italic;
+		color: var(--navy);
+		line-height: 1.4;
+		padding: 0 1.75rem;
+		margin-block: 2rem;
+	}
+</style>

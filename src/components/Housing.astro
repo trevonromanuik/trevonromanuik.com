@@ -1,0 +1,37 @@
+---
+import PolicySection from '@/components/PolicySection.astro';
+import type { PolicyCard } from '@/lib/types';
+
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+const title = "Housing";
+const intro = "A stable home is the foundation of a stable life. This section will lay out a concrete strategy to make housing more affordable, protect renters from exploitation, and open the door of homeownership to more families.";
+const cards: PolicyCard[] = [
+	{
+		icon: '🏘️',
+		title: 'Property Tax Multiplier',
+		text: 'Do you own more than two properties when most people can\'t even afford one? Then you should be paying for that privilege. I would work to update the tax code to allow charging a % multiplier on property taxes based on the number of properties owned.',
+	},
+	{
+		icon: '🔑',
+		title: 'Tenant Protections',
+		text: 'Placeholder — content coming soon. This card will outline fair renter rights, anti-gouging measures, and eviction reform.',
+	},
+	{
+		icon: '🏡',
+		title: 'Community Housing Funds',
+		text: 'Private development is the reason we have eight-plexes going up with no plans for parking - it is the best return on their investment. Instead, I would empower communities to come together to buy up properties so they could decide what their community needs most.',
+	},
+];
+---
+
+<PolicySection
+	alt={alt}
+	title={title}
+	intro={intro}
+	cards={cards}
+/>
+

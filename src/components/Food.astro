@@ -1,0 +1,33 @@
+---
+import PolicySection from '@/components/PolicySection.astro';
+import type { PolicyCard } from '@/lib/types';
+
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+
+const title = "Food";
+const intro = "Everyone deserves access to nutritious, affordable food, regardless of their postal code or income. This section will outline a clear plan to reduce grocery costs, strengthen food security, and support the farmers and workers who feed our communities.";
+const cards: PolicyCard[] = [
+	{
+		icon: '🍲',
+		title: 'Community Kitchens',
+		text: 'I want to empower communities to come together to feed their members. Community Kitchens would be places where anyone in the community could get a hot cooked meal, whether because they can\'t afford groceries, or simply because they don\'t have time to cook for themselves.',
+	},
+	{
+		icon: '🥗',
+		title: 'Food Security',
+		text: 'Placeholder — content coming soon. This card will cover initiatives to ensure no one in our community goes to bed hungry.',
+	},
+	{
+		icon: '🚜',
+		title: 'Local Farmers',
+		text: 'Placeholder — content coming soon. This card will detail support programs for local agriculture and regional supply chains.',
+	},
+];
+---
+
+<PolicySection alt={alt} title={title} intro={intro} cards={cards} />
+

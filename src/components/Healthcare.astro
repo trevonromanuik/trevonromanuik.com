@@ -1,0 +1,38 @@
+---
+import PolicySection from '@/components/PolicySection.astro';
+import type { PolicyCard } from '@/lib/types';
+
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+
+const title = "Healthcare";
+const intro = "Getting sick shouldn't mean going broke. This section will present a roadmap to make quality healthcare accessible and affordable for every person — from routine check-ups to prescription coverage to mental health support.";
+const cards: PolicyCard[] = [
+	{
+		icon: '🩺',
+		title: 'Universal Coverage',
+		text: 'Placeholder — content coming soon. This card will make the case for healthcare as a right, not a privilege tied to employment.',
+	},
+	{
+		icon: '💊',
+		title: 'Drug Pricing',
+		text: 'Placeholder — content coming soon. This card will outline measures to bring the cost of prescription drugs under control.',
+	},
+	{
+		icon: '🧠',
+		title: 'Mental Health',
+		text: 'Placeholder — content coming soon. This card will advocate for treating mental health care with the same urgency as physical health care.',
+	},
+];
+---
+
+<PolicySection
+  alt={alt}
+	title={title}
+	intro={intro}
+	cards={cards}
+/>
+
