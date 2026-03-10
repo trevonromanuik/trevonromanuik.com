@@ -1,17 +1,18 @@
-import { describe, it, expect } from 'vitest';
-import { navItems } from '@/lib/nav';
+import {describe, it, expect} from 'vitest';
+import {navItems} from '@/lib/nav';
 
 describe('navItems', () => {
-  it('contains exactly four items', () => {
-    expect(navItems).toHaveLength(4);
+  it('contains exactly five items', () => {
+    expect(navItems).toHaveLength(5);
   });
 
   it('includes all required sections', () => {
     const labels = navItems.map((item) => item.label);
-    expect(labels).toContain('Background');
-    expect(labels).toContain("Men's Shed");
-    expect(labels).toContain('Ritchie Community League');
-    expect(labels).toContain('Contact');
+    expect(labels).toContain('Introduction');
+    expect(labels).toContain('Food');
+    expect(labels).toContain('Housing');
+    expect(labels).toContain('Healthcare');
+    expect(labels).toContain('Elections');
   });
 
   it('every item has a label and an anchor href', () => {
@@ -22,7 +23,7 @@ describe('navItems', () => {
   });
 
   it('hrefs match section ids used in the page', () => {
-    const expectedHrefs = ['#background', '#mens-shed', '#ritchie', '#contact'];
+    const expectedHrefs = ['#intro', '#food', '#housing', '#healthcare', '#elections'];
     const actualHrefs = navItems.map((item) => item.href);
     expect(actualHrefs).toEqual(expectedHrefs);
   });

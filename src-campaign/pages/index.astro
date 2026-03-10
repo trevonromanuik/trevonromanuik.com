@@ -1,34 +1,36 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import Nav from '@/components/Nav.astro';
-import Header from '@/components/Header.astro';
-import Background from '@/components/Background.astro';
-import MensShed from '@/components/MensShed.astro';
-import RitchieCommunityLeague from '@/components/RitchieCommunityLeague.astro';
-import Contact from '@/components/Contact.astro';
+import Hero from '@/components/Hero.astro';
+import Introduction from "@/components/Introduction.astro";
+import Food from '@/components/Food.astro';
+import Housing from '@/components/Housing.astro';
+import Healthcare from '@/components/Healthcare.astro';
+import Elections from '@/components/Elections.astro';
 ---
 
 <Layout>
   <Nav/>
-  <Header/>
+  <Hero/>
   <main>
-    <Background/>
-    <MensShed alt/>
-    <RitchieCommunityLeague/>
-    <Contact alt/>
+    <Introduction/>
+    <Food alt/>
+    <Housing/>
+    <Healthcare alt/>
+    <Elections/>
   </main>
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__name">Trevon Romanuik</p>
-      <p class="footer__tagline">Software Developer. Neighbour. Community Builder.</p>
+      <p class="footer__tagline">Freedom isn't free — but it doesn't have to cost that much.</p>
     </div>
   </footer>
 </Layout>
 
 <style>
   .footer {
-    background: var(--forest);
-    border-top: 3px solid var(--amber);
+    background: var(--navy);
+    border-top: 3px solid var(--red);
     padding: 3rem 0;
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
@@ -53,7 +55,6 @@ import Contact from '@/components/Contact.astro';
   .footer__tagline {
     font-size: 0.9rem;
     font-style: italic;
-    color: var(--amber-light);
+    color: var(--gold);
   }
 </style>
-

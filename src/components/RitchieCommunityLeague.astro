@@ -1,0 +1,43 @@
+---
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+---
+
+<section id="ritchie" class:list={['section', { 'section--alt': alt }]}>
+  <div class="container">
+    <h2 class="section-title">Ritchie Community League</h2>
+    <div class="section-accent"></div>
+
+    <p class="section-body">
+      Ritchie is one of Edmonton's oldest and most vibrant mature neighbourhoods,
+      and the Ritchie Community League has been the heartbeat of the community for decades.
+      Community leagues in Edmonton are remarkable institutions - resident-run organizations
+      that program the parks, maintain the rinks, and knit neighbourhoods together.
+    </p>
+    <p class="section-body">
+      I got involved because I care about the place I live. A Community League
+      only works when people put their time and energy into it. I not only want Ritchie
+      to thrive, I want it to become a template for communities of the future.
+      Whether that means helping with events, showing up to meetings, or just
+      lending a hand when something needs doing, that is the kind of participation I
+      believe in.
+    </p>
+    <p class="section-body">
+      As the Volunteer Director for the Ritchie Community League, it is my job to discover
+      our community members' skills and passions and find ways that they can be used
+      towards making our community better for everyone who lives here.
+    </p>
+    <p class="section-body">
+      If you live in Ritchie and want to get more connected, the Community League is a great place to start.
+      Email me at <a href="mailto:volunteers@ritchie-league.com">volunteers@ritchie-league.com</a> and we
+      can work together to find a volunteer role that works for you.
+    </p>
+    <p class="section-body">
+      Learn more about the Ritchie Community League <a href="https://www.ritchie-league.com">here</a>.
+    </p>
+  </div>
+</section>
+

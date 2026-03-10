@@ -1,0 +1,39 @@
+---
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+---
+
+<section id="background" class:list={['section', { 'section--alt': alt }]}>
+  <div class="container">
+    <h2 class="section-title">Background</h2>
+    <div class="section-accent"></div>
+
+    <p class="section-body">
+      I was born and raised in Edmonton, Alberta, and this city has shaped
+      everything about who I am. Growing up here gave me an appreciation for community,
+      for hard work, and for the kind of neighbourliness that makes a place feel like home.
+    </p>
+    <p class="section-body">
+      It also helped solidify my core principle:
+    </p>
+    <p class="section-quote">
+      I want people to spend less time getting the things they NEED
+      so they can spend more time pursuing the things they WANT.
+    </p>
+    <p class="section-body">
+      By trade I am a software developer. I spend my days solving problems,
+      building things, and thinking about how systems can be made to work better for the
+      people who use them. That same instinct carries over into everything else I do.
+    </p>
+    <p class="section-body">
+      Outside of work you'll find me involved in my community. I believe
+      strongly that the best way to make a place better is to show up and do the work,
+      not to wait for someone else to fix it. That belief is what led me to get involved
+      with the Ritchie Men's Shed and the Ritchie Community League.
+    </p>
+  </div>
+</section>
+

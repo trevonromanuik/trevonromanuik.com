@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = 'Trevon Romanuik',
-  description = 'Software Developer, Neighbour, and Community Builder based in Edmonton.',
+  title = "Trevon Romanuik",
+  description = "TODO",
 } = Astro.props;
 ---
 
@@ -17,6 +17,7 @@ const {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
   <link rel="icon" href="/favicon.ico"/>
+  <meta name="generator" content={Astro.generator}/>
   <meta name="description" content={description}/>
   <title>{title}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -33,15 +34,15 @@ const {
 
 <style is:global>
   :root {
-    --forest: #1a3c34;
-    --forest-mid: #2e5e52;
-    --amber: #c47a2a;
-    --amber-light: #e09040;
-    --cream: #f7f5f0;
+    --navy: #0d1b35;
+    --blue: #1b3a6b;
+    --red: #c8102e;
+    --gold: #f0a500;
     --white: #ffffff;
-    --text-dark: #1c1c1e;
-    --text-muted: #6b6b6e;
-    --border: #dedad3;
+    --off-white: #f4f5f7;
+    --text-dark: #1a1a2e;
+    --text-muted: #5a6070;
+    --border: #e0e4ed;
     --max-width: 1100px;
   }
 
@@ -78,19 +79,6 @@ const {
     text-decoration: none;
   }
 
-  a[href] {
-    color: var(--amber);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 3px;
-    transition: color 0.2s, text-decoration-color 0.2s;
-  }
-
-  a[href]:hover {
-    color: var(--amber-light);
-    text-decoration-color: currentColor;
-  }
-
   img {
     max-width: 100%;
   }
@@ -106,7 +94,7 @@ const {
   }
 
   .section--alt {
-    background: var(--cream);
+    background: var(--off-white);
   }
 
   .section-label {
@@ -115,7 +103,7 @@ const {
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--amber);
+    color: var(--red);
     margin-bottom: 0.5rem;
   }
 
@@ -123,34 +111,69 @@ const {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--forest);
+    color: var(--navy);
     margin-bottom: 1rem;
   }
 
   .section-accent {
     width: 4rem;
     height: 4px;
-    background: var(--amber);
+    background: var(--red);
     margin-top: 0.75rem;
     margin-bottom: 2rem;
   }
 
-  .section-body {
+  .section-intro {
+    max-width: 700px;
     color: var(--text-muted);
     font-size: 1.05rem;
     line-height: 1.75;
-    margin: 1rem 0;
-    max-width: 720px;
+    margin-bottom: 3rem;
   }
 
-  .section-quote {
-    font-size: clamp(1.35rem, 2.8vw, 2rem);
-    font-style: italic;
-    color: var(--forest);
-    line-height: 1.45;
-    padding: 0.75rem 1.75rem;
-    margin-block: 2rem;
-    max-width: 680px;
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .policy-card {
+    background: var(--white);
+    border-radius: 6px;
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s,
+    box-shadow 0.2s;
+  }
+
+  .section--alt .policy-card {
+    background: var(--white);
+  }
+
+  .policy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .policy-card__icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .policy-card__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+  }
+
+  .policy-card__text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.65;
   }
 </style>
-

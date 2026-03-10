@@ -1,5 +1,5 @@
 ---
-import { navItems } from '@/lib/nav';
+import {navItems} from '@/lib/nav';
 ---
 
 <nav class="nav">
@@ -33,9 +33,9 @@ import { navItems } from '@/lib/nav';
     left: 0;
     right: 0;
     z-index: 100;
-    background: var(--forest);
-    border-bottom: 3px solid var(--amber);
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+    background: var(--navy);
+    border-bottom: 3px solid var(--red);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
   }
 
   .nav__inner {
@@ -69,12 +69,13 @@ import { navItems } from '@/lib/nav';
     font-family: 'Oswald', sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.8);
     padding: 0.4rem 1rem;
     border-radius: 2px;
-    transition: color 0.2s, background 0.2s;
+    transition: color 0.2s,
+    background 0.2s;
   }
 
   .nav__link:hover {
@@ -100,7 +101,7 @@ import { navItems } from '@/lib/nav';
     border-radius: 2px;
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 600px) {
     .nav__toggle {
       display: flex;
     }
@@ -111,7 +112,7 @@ import { navItems } from '@/lib/nav';
       top: 100%;
       left: 0;
       right: 0;
-      background: var(--forest);
+      background: var(--navy);
       flex-direction: column;
       padding: 1rem 2rem;
       gap: 0;

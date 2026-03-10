@@ -4,10 +4,9 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  {label: 'Introduction', href: '#intro'},
-  {label: 'Food', href: '#food'},
-  {label: 'Housing', href: '#housing'},
-  {label: 'Healthcare', href: '#healthcare'},
-  {label: 'Elections', href: '#elections'},
+  { label: 'Background', href: '#background' },
+  { label: "Men's Shed", href: '#mens-shed' },
+  { label: 'Ritchie Community League', href: '#ritchie' },
+  { label: 'Contact', href: '#contact' },
 ];
 

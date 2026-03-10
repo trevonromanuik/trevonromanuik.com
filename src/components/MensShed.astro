@@ -1,0 +1,43 @@
+---
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+---
+
+<section id="mens-shed" class:list={['section', { 'section--alt': alt }]}>
+  <div class="container">
+    <h2 class="section-title">Ritchie Men's Shed</h2>
+    <div class="section-accent"></div>
+
+    <p class="section-body">
+      The Men's Sheds movement started in Australia and has spread around the
+      world as a simple but powerful idea: give men a place to gather, make things, and
+      talk, all without the pressure of a formal setting. Sheds are workshops, yes, but more
+      than that they are communities.
+    </p>
+    <p class="section-body">
+      I got involved with our local Men's Shed because I believe in what it
+      stands for. Social isolation is one of the quietly devastating issues of our time,
+      and the Shed is one of the most practical antidotes I have come across. You show up,
+      you work with your hands, and somewhere along the way you realise you have also made
+      some friends.
+    </p>
+    <p class="section-body">
+      Our slogan at the Ritchie Men's Shed is "Building Community One Project At A Time".
+      As the current President of the Shed, my goal is to bring people together and to
+      show them that giving back to their community isn't hard, and that it can be one of
+      the most fulfilling things you can do.
+    </p>
+    <p class="section-body">
+      If you are curious about Men's Sheds, or want to get involved, I'd love to talk.
+      Feel free to email our Shed at <a href="mailto:mensshedritchie@gmail.com">mensshedritchie@gmail.com</a>,
+      or stop by one of our meetings at the Ritchie Community Hall Saturday mornings from 10 am - 12 pm.
+    </p>
+    <p class="section-body">
+      Learn more about the Ritchie Men's Shed <a href="https://www.ritchie-league.com/rcl/mens-shed">here</a>.
+    </p>
+  </div>
+</section>
+
