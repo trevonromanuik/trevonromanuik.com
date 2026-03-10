@@ -1,0 +1,38 @@
+---
+import PolicySection from '@/components/PolicySection.astro';
+import type {PolicyCard} from '@/lib/types';
+
+interface Props {
+  alt?: boolean;
+}
+
+const {alt = false} = Astro.props;
+
+const title = "Elections";
+const intro = "A democracy only works when every vote counts equally. If we truly want to change the trajectory we are on as a society, then on of the biggest things we can do is to change how elections are run.";
+const cards: PolicyCard[] = [
+  {
+    icon: '🗳️',
+    title: 'Ranked Choice Voting',
+    text: 'First-past-the-post needs to go. Instead of always voting for the lesser of two evils, we need a system that promotes cooperation between candidates and gives smaller voices the opportunity to be heard.',
+  },
+  {
+    icon: '💰',
+    title: 'Campaign Finance',
+    text: "No more private funding of political campaigns. Instead, each voter should get a set amount of money to donate to the campaign of their choosing. Having more money to spend shouldn't let someone choose the winner.",
+  },
+  {
+    icon: '✅',
+    title: 'Voter Access',
+    text: 'Voting is the duty of every citizen. If we give people time off for jury duty, we should also give them time off to go vote. I would make election day a holiday to ensure that everyone has a chance to participate.',
+  },
+];
+---
+
+<PolicySection
+  alt={alt}
+  title={title}
+  intro={intro}
+  cards={cards}
+/>
+

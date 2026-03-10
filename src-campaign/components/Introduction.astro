@@ -1,0 +1,61 @@
+---
+interface Props {
+  alt?: boolean;
+}
+
+const {alt = false} = Astro.props;
+---
+
+<section id="intro" class:list={['section', {'section--alt': alt}]}>
+  <div class="container">
+    <div>
+      <h2 class="section-title">Introduction</h2>
+      <div class="section-accent"></div>
+    </div>
+    <p class="intro__body">
+      My name is Trevon Romanuik. I was born and raised in Edmonton, and I am a software developer by trade.
+    </p>
+    <p class="intro__body">
+      My platform is simple:
+    </p>
+    <blockquote class="intro__quote">
+      I want people to spend less time getting the things they NEED so they can spend more time pursuing the things they
+      WANT.
+    </blockquote>
+    <p class="intro__body">
+      Freedom isn't free. It takes a huge number of people a huge number of hours to maintain the freedoms we take for
+      granted.
+      What have we done with that freedom, though? We have stood by as the rich and powerful have built a system that
+      allows them to get richer and richer while the rest of us struggle to get by on less and less.
+    </p>
+    <p class="intro__body">
+      Some people believe that the solution is to tear it all down and start anew, but I can tell you that breaking
+      things is much, much easier than building them up from scratch.
+      I, on the other hand, believe that if we come together in our local communities, and spend a few hours of our
+      lives working for each other, we can change the system from the bottom up in a way that the billionaires and
+      oligarchs can't stop.
+      Remember, there are more of us than there are of them.
+    </p>
+    <p class="intro__body">
+      How do we do that? Well let me tell you some of my ideas...
+    </p>
+  </div>
+</section>
+
+<style>
+  .intro__body {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin: 1rem 0;
+  }
+
+  .intro__quote {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.4;
+    padding: 0 1.75rem;
+    margin-block: 2rem;
+  }
+</style>

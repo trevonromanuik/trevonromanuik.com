@@ -1,0 +1,35 @@
+---
+import type {PolicyCard} from '@/lib/types';
+
+interface Props {
+  alt?: boolean;
+  title: string;
+  intro: string;
+  cards: PolicyCard[];
+}
+
+const {alt = false, title, intro, cards} = Astro.props;
+const id = title.toLowerCase();
+---
+
+<section id={id} class:list={['section', {'section--alt': alt}]}>
+  <div class="container">
+    <div>
+      <h2 class="section-title">{title}</h2>
+      <div class="section-accent"></div>
+    </div>
+    <p class="section-intro">{intro}</p>
+    <div class="policy-grid">
+      {
+        cards.map((card) => (
+          <div class="policy-card">
+            <div class="policy-card__icon">{card.icon}</div>
+            <h3 class="policy-card__title">{card.title}</h3>
+            <p class="policy-card__text">{card.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+

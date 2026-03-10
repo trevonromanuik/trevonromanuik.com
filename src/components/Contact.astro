@@ -1,0 +1,56 @@
+---
+interface Props {
+  alt?: boolean;
+}
+
+const { alt = false } = Astro.props;
+
+const formUrl =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdip65UjM6sufWNjqUGfZ1F4Uv4sC_AoiM5rN-U1m3Om9vktA/viewform';
+---
+
+<section id="contact" class:list={['section', { 'section--alt': alt }]}>
+  <div class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="section-accent"></div>
+
+    <p class="section-body">
+      I'd love to hear from you, whether you have a question, want to get
+      involved, or just want to say hello. Fill out the form below and I'll
+      get back to you as soon as I can.
+    </p>
+
+    <a class="contact__button" href={formUrl} target="_blank" rel="noopener noreferrer">
+      Open Contact Form
+    </a>
+  </div>
+</section>
+
+<style>
+  .contact__button {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.85rem 2.25rem;
+    border-radius: 3px;
+    border: 2px solid var(--amber);
+    background: var(--amber);
+    color: var(--white);
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+
+  .contact__button:hover {
+    background: var(--amber-light);
+    border-color: var(--amber-light);
+    color: var(--white);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 122, 42, 0.4);
+  }
+</style>
+

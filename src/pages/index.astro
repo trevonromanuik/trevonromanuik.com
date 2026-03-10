@@ -1,0 +1,59 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Nav from '@/components/Nav.astro';
+import Header from '@/components/Header.astro';
+import Background from '@/components/Background.astro';
+import MensShed from '@/components/MensShed.astro';
+import RitchieCommunityLeague from '@/components/RitchieCommunityLeague.astro';
+import Contact from '@/components/Contact.astro';
+---
+
+<Layout>
+  <Nav/>
+  <Header/>
+  <main>
+    <Background/>
+    <MensShed alt/>
+    <RitchieCommunityLeague/>
+    <Contact alt/>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__name">Trevon Romanuik</p>
+      <p class="footer__tagline">Software Developer. Neighbour. Community Builder.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .footer {
+    background: var(--forest);
+    border-top: 3px solid var(--amber);
+    padding: 3rem 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .footer__tagline {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--amber-light);
+  }
+</style>
+
