@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <title>Business Card — Volunteer Director</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+<div class="controls">
+  <p class="controls__hint">
+    Use <em>File → Print</em> and set the paper size to
+    <strong>3.75 × 2.25 in</strong>, or choose <em>Save as PDF</em>.
+  </p>
+  <button class="controls__btn" id="print-btn">Print / Save as PDF</button>
+</div>
+
+<main class="preview">
+  <div class="card">
+    <div class="card__qr-wrap">
+      <img
+        class="card__qr"
+        src="/images/qr-code-rcl.png"
+        alt="QR code linking to the RCL Website"
+        width="400"
+        height="400"
+      />
+      <p class="card__qr-url">RCL Website</p>
+    </div>
+    <div class="card__qr-wrap">
+      <img
+        class="card__qr"
+        src="/images/qr-code-rcl-events.png"
+        alt="QR code linking to the RCL Events Calendar"
+        width="400"
+        height="400"
+      />
+      <p class="card__qr-url">RCL Events Calendar</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --yellow: #ffdd00;
+    --blue: #0091ff;
+    --white: #ffffff;
+  }
+
+  body {
+    background: #d0d0d0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .controls__hint { font-size: 0.875rem; color: #444; }
+
+  .controls__btn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.75rem;
+    border-radius: 3px;
+    border: 2px solid var(--yellow);
+    background: var(--yellow);
+    color: var(--white);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+
+  .controls__btn:hover { background: var(--yellow); border-color: var(--yellow); }
+
+  /* Card preview shell — full page with 0.125in bleed on all sides */
+  .preview {
+    width: 3.75in;
+    height: 2.25in;
+    padding: 0.125in;
+    background: var(--blue);
+    border-radius: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .card__qr-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.22in 0;
+    height: 100%;
+    gap: 0.07in;
+  }
+
+  .card__qr-url {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.09in;
+    letter-spacing: 0.05em;
+    color: var(--white);
+  }
+
+  .card__qr {
+    height: 100%;
+    width: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
+  @media print {
+    @page { size: 3.75in 2.25in; margin: 0; }
+
+    body { background: none; padding: 0; min-height: unset; }
+
+    .controls { display: none; }
+
+    .preview { box-shadow: none; border-radius: 0; }
+  }
+</style>
+
+<script>
+  document.getElementById('print-btn')?.addEventListener('click', () => {
+    window.print();
+  });
+</script>
+
